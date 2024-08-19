@@ -1,12 +1,12 @@
 # Les interfaces et le tri avec les listes dynamiques.
 
 ## Les interfaces
-En Java, une interface est un fichier particulier qui défini un contrat que les classes qui l'implémente doivent respecter. Une interface définit un ensemble de méthodes, mais elle ne fournit pas l'implémentation de celle-ci. Cela permet de créer des classes qui respectent la même nomenclature de méthodes et qui peuvent être interchangeable facilement.
+En Java, une interface est un fichier particulier qui définit un contrat que les classes qui l'implémentent doivent respecter. Une interface définit un ensemble de méthodes, mais elle ne fournit pas l'implémentation de celle-ci. Cela permet de créer des classes qui respectent la même nomenclature de méthodes et qui peuvent être interchangeables facilement.
 
 ### Caractéristiques principales des interfaces en Java :
 
 **Déclaration des méthodes** : Une interface ne contient que les signatures des méthodes (nom de la méthode, paramètres, et type de retour) sans implémentation.</br>
-**Pas d'attributs d'instance** : Contrairement aux classes, les interfaces ne peuvent pas contenir d'attributs d'instance. Elles peuvent cependant contenir des constantes (attributs final et static).</br>
+**Pas d'attributs d'instance** : Contrairement aux classes, les interfaces ne peuvent pas contenir d'attributs d'instance. Elles peuvent cependant contenir des constantes (attributs `final` et `static`).</br>
 **Héritage multiple** : Une classe peut implémenter plusieurs interfaces, ce qui permet d'avoir un héritage multiple d'interfaces en Java.
 
 ### Exemple d'interface :
@@ -18,7 +18,7 @@ public interface Animal {
 }
 ```
 
-Une classe qui doit implémenter cette interface doit le faire grâce au mot-clé **`implements`**. Voici un exemple d'implémentation de l'interface précédement définie :
+Une classe qui doit implémenter cette interface doit le faire grâce au mot-clé **`implements`**. Voici un exemple d'implémentation de l'interface précédemment définie :
 
 ```java
 public class Chien implements Animal {
@@ -37,7 +37,7 @@ public class Chien implements Animal {
 ## Les interfaces pour le tri avec les listes dynamiques.
 ### L'interface `Comparable`
 
-L'interface Comparable est une interface générique fournie par Java, qui se trouve dans le package `java.lang`. Elle permet de définir de quelle manières les objets doivent être ordrés en implémentant la méthode `compareTo`.
+L'interface Comparable est une interface générique fournie par Java, qui se trouve dans le package `java.lang`. Elle permet de définir de quelle manière les objets doivent être ordrés en implémentant la méthode `compareTo`.
 
 #### Signature de l'interface Comparable :
 
@@ -59,7 +59,7 @@ public interface Comparable<T> {
 
 #### Exemple d'implémentation avec une classe `Personne` :
 
-Supposons que vous ayez une classe Personne avec un attribut nom et un prenom, et que vous souhaitiez trier les personnes par leur nom par ordre alphabétique.
+Supposons que vous ayez une classe Personne avec un attribut nom et un prénom, et que vous souhaitiez trier les personnes par leur nom par ordre alphabétique.
 
 ```java
 public class Personne implements Comparable<Personne> {
@@ -123,8 +123,8 @@ public class Main {
 
 ## ArrayList vs HashSet vs TreeSet
 
-Java met à disposition plusieurs structures de données ayant des comportement différents et utiles dans différentes situations.
-`ArrayList` est une liste ordonnée selon l'ordre d'insertion, qui permet les doublons et peut être triée manuellement avec `Collections.sort`, tandis que `HashSet` est un ensemble non ordonné qui ne permet pas les doublons, offrant des performances rapides pour les opérations de base, et `TreeSet` est un ensemble trié automatiquement selon l'ordre défini par le type de donnée des éléments, ne permettant pas les doublons. Le choix entre eux dépend de la nécessité de gérer des doublons, de maintenir un ordre, et des exigences de performance.
+Java met à disposition plusieurs structures de données ayant des comportements différents et utiles dans différentes situations.
+`ArrayList` est une liste ordonnée selon l'ordre d'insertion, qui permet des doublons et peut être triée manuellement avec `Collections.sort`, tandis que `HashSet` est un ensemble non ordonné qui ne permet pas les doublons, offrant des performances rapides pour les opérations de base, et `TreeSet` est un ensemble trié automatiquement selon l'ordre défini par le type de donnée des éléments, ne permettant pas les doublons. Le choix entre eux dépend de la nécessité de gérer des doublons, de maintenir un ordre, et des exigences de performance.
 
 Voici un schéma vous aidant a trouver la bonne structure de donnée à utiliser:
 
@@ -149,7 +149,7 @@ flowchart TD
 ### Travail à réaliser
 - Créez un nouveau projet java.
 
-- Dans la méthode main, utilisez une structure de donnée permettant d'order les éléments suivant par ordre alphabétique et sans doublons:
+- Dans la méthode main, utilisez une structure de donnée permettant d'order les éléments suivants par ordre alphabétique et sans doublons:
   - Pomme
   - Banane
   - Orange
@@ -182,9 +182,9 @@ flowchart TD
   - S'il est comestible en boolean
   - Les getters pour les différents attributs
   - La méthode compareTo:
-    - Ordre les fruits par nombre croissant de graîne et s'il y a une égalité, par ordre alphabétique.
+    - Ordonne les fruits par nombre croissant de graînes et s'il y a une égalité, par ordre alphabétique.
   - La méthode toString:
-    - Le nom du fruits, suivi du nombre de graines entre parenthèses, suivi d'une * s'il n'est pas commestible. (par ex. "Pomme (4)" ou "Solanum(50)*")
+    - Le nom du fruits, suivi du nombre de graines entre parenthèses, suivi d'une * s'il n'est pas comestible. (par ex. "Pomme (4)" ou "Solanum(50)*")
 - Dans la méthode main, créez les objets fruits suivant cette liste : 
   - Pomme - Graines : 4, Comestible : Oui
   - Banane - Graines : 0, Comestible : Oui
@@ -216,7 +216,7 @@ flowchart TD
 > Manchineel (333)* </br>
 
 ## Partie 2' - Optionnel
-Changez l'ordre de tri pour que les fruits non comestible soit en premier dans la liste s'il y a égalité il faut que le fruit soit trié par nombre de graines et ensuite par ordre alphabétique.
+Changez l'ordre de tri pour que les fruits non comestibles soient en premier dans la liste s'il y a égalité il faut que le fruit soit trié par nombre de graines et ensuite par ordre alphabétique.
 
 ### Résultat attendu
 > Solanum (50)*  </br>
@@ -240,7 +240,7 @@ La premières implémentation que vous avez normalement du utiliser dans la part
 Collections.sort(List<T> list);
 ```
 > [!IMPORTANT]  
-> Dans cet example le `T` peut prendre la forme de n'importe quel type d'objet.
+> Dans cet exemple le `T` peut prendre la forme de n'importe quel type d'objet.
 
 La deuxième implémentation ajoute un `Comparator`:
 ```java
@@ -293,8 +293,8 @@ public class Main {
 
 ### Travail à réaliser
 
-- Reprennez le programme de la partie 2
-- Implementez un tri pour vos fruits pour que exceptionnellement ils soit trié uniquement par ordre alphabétique.
+- Reprenez le programme de la partie 2
+- Implémentez un tri pour vos fruits pour que exceptionnellement ils soit trié uniquement par ordre alphabétique.
 
 ### Résultat attendu
 
