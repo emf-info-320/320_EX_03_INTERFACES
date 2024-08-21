@@ -38,7 +38,7 @@ public class Chien implements Animal {
 
 ## Les interfaces pour le tri avec les listes dynamiques.
 
-Pour pouvoir trier des choses, il faut nécessairemnt pouvoir les comparer entre-elles. On pourra ainsi déterminer laquelle vient avant, vient après, ... en comparant ces choses entre-elles.
+Pour pouvoir trier des choses, il faut nécessairement pouvoir les comparer entre-elles. On pourra ainsi déterminer laquelle vient avant, vient après, ... en comparant ces choses entre-elles.
 
 Java souhaitant dès sa création mettre à disposition des outils pour trier et des collections triées, s'est trouvée dans la même situation. Or on ne compare pas de la même façon deux nombres, deux chaînes de caractères, deux vélos, deux girafes, ... sans parler que cela peut changer d'une fois à l'autre (on peut vouloir trier des voitures par km, et une autre fois par prix).
 
@@ -79,6 +79,25 @@ public interface Comparable<T> {
 
 Supposons que vous ayez une classe Personne avec un attribut nom et un prénom, et que vous souhaitiez trier les personnes par leur nom par ordre alphabétique.
 
+
+```mermaid
+classDiagram
+direction LR
+class Comparable["Comparable&lt;T&gt;"] {
+    <<interface>>
+    compareTo(T objetAComparer) int
+}
+class Personne {
+    -String nom
+    -String prenom
+    +Personne(String nom, String prenom)
+    +getNom() String
+    +getPrenom() String
+    +toString() String
+    compareTo(Personne autrePersonne) int
+}
+Personne ..|> Comparable : implements
+```
 ```java
 public class Personne implements Comparable<Personne> {
     private String nom;
@@ -110,9 +129,9 @@ public class Personne implements Comparable<Personne> {
 ```
 
 > [!IMPORTANT]  
-> Toutes les classes de Java comme `String`, les wrappers `Ìnteger`, `Double`, ... implémentent déjà l'interface Comparable.
+> Toutes les classes de Java comme `String`, les wrappers `Ìnteger`, `Double`, ... implémentent déjà l'interface `Comparable`.
 > C'est la raison pour laquelle on peut facilement leur déléguer cette tâche de comparaison comme ci-dessus.
-> En gros, si vous voulez 'choses', demandez à l'une de se comparer à l'autre !
+> En gros, si vous voulez trier des 'choses' demandez-leur de se comparer l'une à l'autre !
 
 #### Utilisation avec une ArrayList :
 
