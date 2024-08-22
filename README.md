@@ -14,24 +14,36 @@ On peut voir une interface comme un "savoir-faire", et les classes qui implémen
 ### Exemple d'interface :
 
 ```java
-public interface Animal {
-    void manger();
-    void dormir();
+public interface IVolant {
+    void voler();
+    int getNombreDAiles();
 }
 ```
 
 Une classe qui doit implémenter cette interface doit le faire grâce au mot-clé **`implements`**. Voici un exemple d'implémentation de l'interface précédemment définie :
 
 ```java
-public class Chien implements Animal {
+public class Oiseau implements IVolant {
     @Override
-    public void manger() {
-        System.out.println("Le chien mange.");
+    public void voler() {
+        System.out.println("L'oiseau bat des ailes et s'envole dans le ciel.");
     }
 
     @Override
-    public void dormir() {
-        System.out.println("Le chien dort.");
+    public int getNombreDAiles() {
+        return 2;
+    }
+}
+
+public class Libellule implements IVolant {
+    @Override
+    public void voler() {
+        System.out.println("La libellule bat rapidement des ailes au-dessus de l'étang.");
+    }
+
+    @Override
+    public int getNombreDAiles() {
+        return 4;
     }
 }
 ```
@@ -160,9 +172,9 @@ public class Main {
 #### Résultat sur la console :
 
 ```text
-Dente Al</br>
-Poppins Marie</br>
-Voyante Claire</br>
+Dente Al
+Poppins Marie
+Voyante Claire
 ```
 
 ## ArrayList vs HashSet vs TreeSet
@@ -195,99 +207,11 @@ flowchart TD
 
 ## Partie 1 : Utilisation de structure de tri
 
-### Travail à réaliser
-- Créez un nouveau projet java.
-
-- Dans la méthode main, utilisez une structure de donnée permettant d'order les éléments suivants par ordre alphabétique et sans doublons:
-  - Pomme
-  - Banane
-  - Orange
-  - Pomme
-  - Fraise
-  - Banane
-  - Raisin
-  - Orange
-  - Pomme
-  - Banane
-
-> [!NOTE]  
-> Vous devez ajouter les éléments dans votre liste dans l'ordre donné ci-dessus.
-
-### Résultat attendu sur la console
-
-```
-Banane </br>
-Fraise </br>
-Orange </br>
-Pomme </br>
-Raisin </br>
-```
+[Exercice1](/Exercice1.md)
 
 ## Partie 2 : L'interface Comparable
 
-### Travail à réaliser
-- Toujours dans le même projet
-- Ajoutez une classe représentant des `Fruit`, qui sera définie par les attributs et méthodes suivants:
-  - Un nom en String
-  - Un nombre de graine en int
-  - S'il est comestible en boolean
-  - Les getters pour les différents attributs
-  - La méthode compareTo:
-    - Ordonne les fruits par nombre croissant de graînes et s'il y a une égalité, par ordre alphabétique.
-  - La méthode toString:
-    - Le nom du fruits, suivi du nombre de graines entre parenthèses, suivi d'une * s'il n'est pas comestible. (par ex. "Pomme (4)" ou "Solanum(50)*")
-- Dans la méthode main, créez les objets fruits suivant cette liste : 
-  - Pomme - Graines : 4, Comestible : Oui
-  - Banane - Graines : 0, Comestible : Oui
-  - Manchineel - Graines : 333, Comestible : Non
-  - Orange - Graines : 10, Comestible : Oui
-  - Pomme - Graines : 4, Comestible : Oui
-  - Fraise - Graines : 200, Comestible : Oui
-  - Banane - Graines : 0, Comestible : Oui
-  - Solanum - Graines : 50, Comestible : Non
-  - Raisin - Graines : 4, Comestible : Oui
-  - Orange - Graines : 10, Comestible : Oui
-  - Pomme - Graines : 4, Comestible : Oui
-  - Banane - Graines : 0, Comestible : Oui
-- Ajoutez les objets dans une liste pour qu'il soit trié comme implémenté dans la classe `Fruit` les doublons sont autorisés.
-
-### Résultat attendu sur la console
-
-```
-Banane (0)</br>
-Banane (0) </br>
-Banane (0) </br>
-Pomme (4) </br>
-Pomme (4) </br>
-Pomme (4) </br>
-Raisin (4) </br>
-Orange (10) </br>
-Orange (10) </br>
-Solanum (50)* </br>
-Fraise (200) </br>
-Manchineel (333)* </br>
-```
-
-## Partie 2' - Optionnel
-
-Changez l'ordre de tri pour que les fruits non comestibles soient en premier dans la liste s'il y a égalité il faut que le fruit soit trié par nombre de graines et ensuite par ordre alphabétique.
-
-### Résultat attendu sur la console
-
-```
-Solanum (50)*  </br>
-Manchineel (333)* </br>
-Banane (0) </br>
-Banane (0) </br>
-Banane (0) </br>
-Pomme (4) </br>
-Pomme (4) </br>
-Pomme (4) </br>
-Raisin (4) </br>
-Orange (10) </br>
-Orange (10) </br>
-Fraise (200) </br>
-```
+[Exercice2](/Exercice2.md)
 
 ## Partie 3 : Le Comparator
 
@@ -346,30 +270,12 @@ public class Main {
 
 #### Résultat attendu sur la console
 
-```
-Dente Al</br>
-Voyante Claire</br>
-Poppins Marie</br>
+```text
+Dente Al
+Voyante Claire
+Poppins Marie
 ```
 
-### Travail à réaliser
+### Exercice
 
-- Reprenez le programme de la partie 2
-- Implémentez un tri pour vos fruits pour que exceptionnellement ils soit trié uniquement par ordre alphabétique.
-
-#### Résultat attendu sur la console
-
-```
-Banane (0) </br>
-Banane (0)</br>
-Banane (0)</br>
-Fraise (200)</br>
-Manchineel (333)* </br>
-Orange (10)</br>
-Orange (10)</br>
-Pomme (4)</br>
-Pomme (4)</br>
-Pomme (4)</br>
-Raisin (4)</br>
-Solanum (50)* </br>
-```
+[Exercice3](/Exercice3.md)
