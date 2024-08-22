@@ -129,7 +129,7 @@ public class Personne implements Comparable<Personne> {
 ```
 
 > [!IMPORTANT]  
-> Toutes les classes de Java comme `String`, les wrappers `Ìnteger`, `Double`, ... implémentent déjà l'interface `Comparable`.
+> Toutes les classes de Java comme `String`, les wrappers `Integer`, `Double`, ... implémentent déjà l'interface `Comparable`.
 > C'est la raison pour laquelle on peut facilement leur déléguer cette tâche de comparaison comme ci-dessus.
 > En gros, si vous voulez trier des 'choses' demandez-leur de se comparer l'une à l'autre !
 
