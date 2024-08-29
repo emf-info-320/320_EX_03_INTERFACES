@@ -6,7 +6,7 @@
 ## Travail à réaliser
 - Ouvrez le fichier Exercice1.java
 
-- Dans le constructeur, utilisez une structure de donnée permettant d'order les éléments suivants par ordre alphabétique et sans doublons:
+- Dans le constructeur, utilisez une structure de donnée permettant d'ordonner les éléments suivants par ordre alphabétique et sans doublons:
   - Pomme
   - Banane
   - Orange
