@@ -15,11 +15,12 @@
   - Un nombre de graine en int
   - S'il est comestible en boolean
   - Les getters pour les différents attributs
+  - Un constructeur prenant toutes ces informations
   - La méthode compareTo:
     - Ordonne les fruits par nombre croissant de graînes et s'il y a une égalité, par ordre alphabétique.
   - La méthode toString:
     - Le nom du fruits, suivi du nombre de graines entre parenthèses, suivi d'une * s'il n'est pas comestible. (par ex. "Pomme (4)" ou "Solanum(50)*")
-- Dans le constructeur, créez les objets fruits suivant cette liste : 
+- Créez les fruits suivants : 
   - Pomme - Graines : 4, Comestible : Oui
   - Banane - Graines : 0, Comestible : Oui
   - Manchineel - Graines : 333, Comestible : Non
@@ -32,7 +33,7 @@
   - Orange - Graines : 10, Comestible : Oui
   - Pomme - Graines : 4, Comestible : Oui
   - Banane - Graines : 0, Comestible : Oui
-- Ajoutez les objets dans une liste pour qu'il soit trié comme implémenté dans la classe `Fruit` les doublons sont autorisés.
+- Ajoutez ces objets dans une liste et triez cette liste (comme implémenté dans la classe `Fruit`, les doublons sont autorisés).
 
 ## Résultat attendu sur la console
 
