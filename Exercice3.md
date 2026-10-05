@@ -15,13 +15,13 @@
   - Banane - Graines : 0, Comestible : Oui
   - Manchineel - Graines : 333, Comestible : Non
   - Orange - Graines : 10, Comestible : Oui
-  - Pomme - Graines : 4, Comestible : Oui
+  - Pomme - Graines : 3, Comestible : Oui
   - Fraise - Graines : 200, Comestible : Oui
   - Banane - Graines : 0, Comestible : Oui
   - Solanum - Graines : 50, Comestible : Non
   - Raisin - Graines : 4, Comestible : Oui
   - Orange - Graines : 10, Comestible : Oui
-  - Pomme - Graines : 4, Comestible : Oui
+  - Pomme - Graines : 5, Comestible : Oui
   - Banane - Graines : 0, Comestible : Oui
 - Implémentez un tri pour vos fruits pour que exceptionnellement ils soit trié uniquement par ordre alphabétique.
 
@@ -36,8 +36,8 @@ Manchineel (333)*
 Orange (10)
 Orange (10)
 Pomme (4)
-Pomme (4)
-Pomme (4)
+Pomme (3)
+Pomme (5)
 Raisin (4)
 Solanum (50)*
 ```

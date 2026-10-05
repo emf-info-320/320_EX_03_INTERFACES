@@ -25,13 +25,13 @@
   - Banane - Graines : 0, Comestible : Oui
   - Manchineel - Graines : 333, Comestible : Non
   - Orange - Graines : 10, Comestible : Oui
-  - Pomme - Graines : 4, Comestible : Oui
+  - Pomme - Graines : 3, Comestible : Oui
   - Fraise - Graines : 200, Comestible : Oui
   - Banane - Graines : 0, Comestible : Oui
   - Solanum - Graines : 50, Comestible : Non
   - Raisin - Graines : 4, Comestible : Oui
   - Orange - Graines : 10, Comestible : Oui
-  - Pomme - Graines : 4, Comestible : Oui
+  - Pomme - Graines : 5, Comestible : Oui
   - Banane - Graines : 0, Comestible : Oui
 - Ajoutez ces objets dans une liste et triez cette liste (comme implémenté dans la classe `Fruit`, les doublons sont autorisés).
 
@@ -41,10 +41,10 @@
 Banane (0)
 Banane (0)
 Banane (0)
-Pomme (4)
-Pomme (4)
+Pomme (3)
 Pomme (4)
 Raisin (4)
+Pomme (5)
 Orange (10)
 Orange (10)
 Solanum (50)*
@@ -64,10 +64,10 @@ Manchineel (333)*
 Banane (0)
 Banane (0)
 Banane (0)
-Pomme (4)
-Pomme (4)
+Pomme (3)
 Pomme (4)
 Raisin (4)
+Pomme (5)
 Orange (10)
 Orange (10)
 Fraise (200)
